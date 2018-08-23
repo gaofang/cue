@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <!-- <meta http-equiv="X-UA-Compatible" content="ie=edge"> -->
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <h3>age</h3>
+        <p>{{age}}</p>
+    </div>
+    <script src="./cue.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            let opt = {el: '#app', data: {name:'sss', age: 23}}
+            let vm = new Cue(opt)
+            setInterval(() => {
+                opt.data.age = opt.data.age + 1;
+            }, 1000)
+        })
+    </script>
+</body>
+</html>
